@@ -1,0 +1,301 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+.scroll-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.map-marker-wrapper {
+  pointer-events: none;
+}
+
+/* Home Marker */
+.map-home-marker {
+  background: #16a34a;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 9999px;
+  cursor: pointer;
+  box-shadow: 0 0 25px rgba(22, 163, 74, 0.9);
+  transition: transform 0.2s ease;
+}
+
+.map-home-marker:hover {
+  transform: scale(1.15);
+}
+
+/* Popup wrapper */
+.map-popup-container {
+  padding: 0;
+  background: transparent;
+  width: fit-content;
+  max-width: min(280px, calc(100vw - 32px));
+}
+
+/* Mapbox default popup override */
+.mapboxgl-popup-content {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.map-property-popup .mapboxgl-popup-content {
+  width: min(280px, calc(100vw - 32px)) !important;
+  max-width: min(280px, calc(100vw - 32px)) !important;
+}
+
+/* Map search control */
+.mapboxgl-ctrl-top-right {
+  z-index: 20;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder {
+  position: relative;
+  min-width: 280px;
+  max-width: min(360px, calc(100vw - 32px));
+  margin: 16px 16px 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+  background: rgba(13, 13, 13, 0.82);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(14px);
+  overflow: visible;
+  z-index: 20;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--input {
+  height: 46px;
+  padding: 0 48px 0 44px;
+  color: #f5f5f5;
+  font-size: 14px;
+  background: transparent;
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--input:focus {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--input::placeholder {
+  color: rgba(245, 245, 245, 0.6);
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder svg {
+  fill: rgba(245, 245, 245, 0.75);
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--icon-search {
+  top: 50%;
+  left: 14px;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--button-clear {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  width: 20px;
+  height: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--button-clear:hover svg {
+  fill: #ffffff;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder .suggestions {
+  position: absolute;
+  top: calc(100% + 10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  background: rgba(13, 13, 13, 0.96);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.42);
+  overflow: hidden;
+  z-index: 30;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder .suggestions > li > a {
+  padding: 12px 14px;
+  color: #f5f5f5;
+}
+
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder .suggestions > li > a:hover,
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder .suggestions > li.active > a {
+  background: rgba(0, 226, 111, 0.14);
+  color: #ffffff;
+}
+
+@media (max-width: 640px) {
+  .mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder {
+    min-width: 220px;
+    margin: 12px 12px 0 0;
+  }
+
+  .mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--input {
+    height: 42px;
+    font-size: 13px;
+  }
+
+  .mapboxgl-ctrl-top-right .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--icon-search {
+    left: 12px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.5rem;
+
+  --background: #181316;
+  --foreground: #f5f5f5;
+
+  --card: #201b1e;
+  --card-foreground: #f5f5f5;
+
+  --popover: #201b1e;
+  --popover-foreground: #f5f5f5;
+
+  --primary: #00E26F;
+  --primary-foreground: #ffffff;
+
+  --primary-gradient: linear-gradient(
+    180deg,
+    #00E26F 0%,
+    #00602F 111.36%
+  );
+
+  --secondary: #38323B;
+  --secondary-foreground: #ffffff;
+
+  --muted: #2a2327;
+  --muted-foreground: #b3b3b3;
+
+  --accent: #2a2327;
+  --accent-foreground: #ffffff;
+
+  --destructive: #dc2626;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: #00E26F;
+}
+
+
+.dark {
+  --background: #0D0D0D;
+  --foreground: #ffffff;
+
+  --card: #201b1e;
+  --card-foreground: #ffffff;
+
+  --popover: #201b1e;
+  --popover-foreground: #ffffff;
+
+  --primary: oklch(0.62 0.22 262);
+  --primary-foreground: #ffffff;
+
+  --secondary: #2a2327;
+  --secondary-foreground: #ffffff;
+
+  --muted: #2a2327;
+  --muted-foreground: #c2c2c2;
+
+  --accent: #2a2327;
+  --accent-foreground: #ffffff;
+
+  --destructive: oklch(0.704 0.191 22.216);
+
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: oklch(0.62 0.22 262);
+
+  --sidebar: #1d171a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: oklch(0.62 0.22 262);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #2a2327;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: oklch(0.62 0.22 262);
+}
+
+/* hide scrollbar but keep scrolling */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-outfit), sans-serif;
+  }
+}

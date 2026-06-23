@@ -1,0 +1,23 @@
+[33m627bae3[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mazhar[m[33m)[m HEAD@{0}: commit (merge): adder
+[33mbecfe88[m HEAD@{1}: commit: addda
+[33mc565807[m HEAD@{2}: reset: moving to HEAD
+[33mc565807[m HEAD@{3}: commit: addddd
+[33m8bd8b7d[m HEAD@{4}: commit: Deploy as azhar author
+[33m0789e64[m HEAD@{5}: pull origin sabbir: Fast-forward
+[33m393fdb0[m HEAD@{6}: pull origin sabbir: Fast-forward
+[33m9187f37[m[33m ([m[1;31morigin/azhar[m[33m)[m HEAD@{7}: commit: add new data
+[33mf4d9a17[m HEAD@{8}: commit: updated
+[33mc9cac0c[m HEAD@{9}: commit (merge): merged
+[33m32138f2[m HEAD@{10}: commit: merged
+[33m7413858[m HEAD@{11}: commit (merge): sdd|
+[33med4f2eb[m HEAD@{12}: commit: merged
+[33m567485b[m HEAD@{13}: commit (merge): merged
+[33mf64d574[m HEAD@{14}: commit (merge): merged
+[33mf013a5e[m HEAD@{15}: commit: add updated code to copey sabbir
+[33mec36783[m HEAD@{16}: commit (merge): merged
+[33mb863cc0[m HEAD@{17}: commit: filter implemented
+[33md598447[m HEAD@{18}: commit (merge): payment added
+[33mada2935[m HEAD@{19}: checkout: moving from sabbir to azhar
+[33m32837f1[m[33m ([m[1;32msabbir[m[33m)[m HEAD@{20}: checkout: moving from sabbir to sabbir
+[33m32837f1[m[33m ([m[1;32msabbir[m[33m)[m HEAD@{21}: checkout: moving from sabbir to sabbir
+[33m32837f1[m[33m ([m[1;32msabbir[m[33m)[m HEAD@{22}: clone: from https://github.com/devscout24/f4rooqh_Tech_hype1_frontend.git
