@@ -95,7 +95,7 @@ export default function Footer() {
                     href="/terms-condition"
                     className="text-sm text-zinc-500 hover:text-white transition"
                   >
-                    Privacy Policy
+                    Terms & Condition
                   </a>
                 </li>
               </ul>
@@ -116,14 +116,7 @@ export default function Footer() {
                       FAQs
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="#"
-                      className="text-sm text-zinc-500 hover:text-white transition"
-                    >
-                      Agent Verification
-                    </a>
-                  </li>
+                  
                 </ul>
               </div>
 

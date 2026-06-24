@@ -27,15 +27,18 @@ export default function VerifyHero() {
         <section className="relative">
             <div className="relative w-full h-screen">
                 <Image
-                    src="/trust-banner.png"
-                    alt="Saudi skyline with digital matrix overlay"
+                    src="/hero-doha-pano.jpg"
+                    alt="Panoramic Sunset Skyline"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     priority
                 />
-                <div className="absolute inset-0" />
+                {/* Light green vibe overlay (halka green vibe) */}
+                <div className="absolute inset-0 bg-emerald-600/10 mix-blend-color pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-emerald-950/50 via-emerald-900/10 to-transparent pointer-events-none" />
             </div>
-            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
+            {/* Added drop shadow to text instead of dark overlay so the image stays 100% bright */}
+            <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6 drop-shadow-[0_0_15px_rgba(0,0,0,0.8)]">
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white tracking-tight leading-none mb-8 md:mb-10">
                     Verified. Sealed. Secured
                 </h1>
@@ -45,10 +48,9 @@ export default function VerifyHero() {
 
                 <Button
                     size="lg"
-                    className="px-10 py-7 md:px-12 md:py-8 text-lg md:text-2xl font-semibold rounded-xl 
-                     bg-transparent border-2 border-orange-300/70 text-emerald-200 
-                     hover:bg-orange-300/10 hover:text-emerald-100 
-                     hover:border-orange-300/90 transition-all duration-300"
+                    className="px-10 py-7 md:px-12 md:py-8 text-lg md:text-2xl font-bold rounded 
+                     bg-emerald-600 border-none text-white 
+                     hover:bg-emerald-500 transition-all duration-300"
                 >
                     Explore verified properties
                 </Button>

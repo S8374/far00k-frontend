@@ -380,8 +380,8 @@ function SignupPage() {
                       Terms of Service
                     </a>{" "}
                     and{" "}
-                    <a href="#" className="text-emerald-600 hover:underline">
-                      Privacy Policy
+                    <a href="/terms-condition" className="text-emerald-600 hover:underline">
+                     Terms & Condition
                     </a>
                   </label>
                 </div>

@@ -113,6 +113,10 @@ const mapPropertyToCard = (property: ApiProperty) => {
   };
 };
 
+import AboutUs from "@/components/modules/home/AboutUs";
+import FAQ from "@/components/modules/home/FAQ";
+import ContactUs from "@/components/modules/home/ContactUs";
+
 const HomePage = () => {
   const [selectedCategory, setSelectedCategory] = useState(DEFAULT_CATEGORY);
   const [filters, setFilters] = useState<HomeSearchFilters>(DEFAULT_FILTERS);
@@ -228,6 +232,9 @@ const dynamicCategories: CategoryItem[] = backendCategories
       <GigaProjects />
       <DeveloperProjects />
       <Verify />
+      <AboutUs />
+      <FAQ />
+      <ContactUs />
       <Subscribe />
       <Footer />
     </div>

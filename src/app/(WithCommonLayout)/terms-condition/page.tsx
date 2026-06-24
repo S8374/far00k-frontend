@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
             Sakk – The Digital Seal
           </h1>
           <p className="text-2xl md:text-3xl font-semibold text-gray-300">
-            Privacy Policy
+            Terms & Condition
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export default function PrivacyPolicy() {
         <div className="prose prose-invert max-w-none mb-10">
           <p className="text-lg text-gray-300 leading-relaxed px-2 md:px-20">
             At Sakk, we are committed to protecting the privacy of investors and
-            agents. This Privacy Policy outlines how we handle your information
+            agents. This Terms & Condition outlines how we handle your information
             in compliance with Saudi Arabian Real Estate General Authority
             (REGA) laws and international data protection standards.
           </p>
@@ -87,7 +87,7 @@ export default function PrivacyPolicy() {
                     </strong>
                     . Your privacy is important to us, and we are committed to
                     protecting the personal information you share with us. This
-                    Privacy Policy explains how we collect, use, and safeguard
+                    Terms & Condition explains how we collect, use, and safeguard
                     your information when you visit our website or use our
                     services.
                   </p>
@@ -238,7 +238,7 @@ export default function PrivacyPolicy() {
                 </CardHeader>
                 <CardContent className="text-gray-300">
                   <p>
-                    We may update this Privacy Policy from time to time. Changes
+                    We may update this Terms & Condition from time to time. Changes
                     will be posted on this page with an updated revision date.
                   </p>
                 </CardContent>
