@@ -6,17 +6,17 @@ import { Target, ShieldCheck } from "lucide-react";
 
 export default function AboutUs() {
     return (
-        <section id="about-us" className="py-24 text-white relative overflow-hidden">
+        <section id="about-us" className="py-16 md:py-24 text-white relative overflow-hidden">
             {/* Background Glow */}
             <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-900/20  blur-[120px] pointer-events-none" />
 
             <Container className="relative z-10">
-                <div className="flex flex-col lg:flex-row gap-16 items-center">
+                <div className="flex flex-col lg:flex-row gap-12 md:gap-16 items-center">
                     {/* Left Side: Text & Cards */}
-                    <div className="flex-1 space-y-10">
+                    <div className="flex-1 space-y-8 md:space-y-10">
                         <div>
-                            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white leading-tight">
-                                Pioneering the Digital Standard of <span className="text-emerald-500">Saudi Real Estate</span>
+                            <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-white leading-tight">
+                                Pioneering the Digital Standard of <br className="hidden sm:block" /><span className="text-emerald-500">Saudi Real Estate</span>
                             </h2>
                             <p className="text-lg text-stone-400 leading-relaxed">
                                 Diyar Estate merges cutting-edge technology with luxury property investments to bring you unparalleled security, transparency, and high-yield returns in the heart of Saudi Arabia.

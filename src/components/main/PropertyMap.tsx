@@ -122,17 +122,17 @@ export default function PropertyMap({ properties, isMapActive }: PropertyMapProp
     markerByPropertyIdRef.current.clear();
     activePopupRef.current = null;
 
-    const bounds = new mapboxgl.LngLatBounds();
-    let hasRealCoordinates = false;
+    let firstValidCoords: [number, number] | null = null;
 
     properties.forEach((property) => {
       const lat = Number(property.latitude ?? property.lat);
       const lng = Number(property.longitude ?? property.lng);
 
-      if (Number.isNaN(lat) || Number.isNaN(lng)) return;
+      if (Number.isNaN(lat) || Number.isNaN(lng) || (lat === 0 && lng === 0)) return;
 
-      bounds.extend([lng, lat]);
-      hasRealCoordinates = true;
+      if (!firstValidCoords) {
+        firstValidCoords = [lng, lat];
+      }
 
       const markerDiv = document.createElement("div");
       markerDiv.style.cursor = "pointer";
@@ -205,11 +205,11 @@ export default function PropertyMap({ properties, isMapActive }: PropertyMapProp
       }
     });
 
-    if (hasRealCoordinates) {
-      map.fitBounds(bounds, {
-        padding: 70,
+    if (firstValidCoords) {
+      map.flyTo({
+        center: firstValidCoords,
+        zoom: 15.4,
         duration: 900,
-        maxZoom: 16,
         pitch: 71,
         bearing: -18,
       });

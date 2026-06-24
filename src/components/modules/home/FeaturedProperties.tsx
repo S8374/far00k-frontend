@@ -81,15 +81,17 @@ function FeaturedProperties() {
       <div className="relative">
         <Swiper
           modules={[Navigation, Autoplay]}
-          spaceBetween={24}
+          spaceBetween={12}
           slidesPerView={1.2}
-          loop
+          loop={sortedProperties.length >= 5}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
-            768: { slidesPerView: 2 },
+            640: { slidesPerView: 2 },
+            768: { slidesPerView: 2.5 },
             1024: { slidesPerView: 3 },
-            1280: { slidesPerView: 5.6 },
+            1280: { slidesPerView: 4 },
+            1536: { slidesPerView: 5 },
           }}
         >
           {sortedProperties.map((property, index) => (

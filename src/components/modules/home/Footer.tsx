@@ -29,7 +29,7 @@ export default function Footer() {
                 Smart Real Estate Investment Platform
               </p>
 
-              <Link href={"/contact-us"}>
+              <Link href={"/#contact-us"}>
                 <Button
                   variant="outline"
                   className="cursor-pointer h-9 px-6 rounded-lg border-white/10 bg-stone-900 hover:bg-white/5 text-gray-300"
@@ -76,7 +76,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li>
                   <a
-                    href="#"
+                    href="/#about-us"
                     className="text-sm text-zinc-500 hover:text-white transition"
                   >
                     About Us
@@ -84,7 +84,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    href="/contact-us"
+                    href="/#contact-us"
                     className="text-sm text-zinc-500 hover:text-white transition"
                   >
                     Contact Us
@@ -110,7 +110,7 @@ export default function Footer() {
                 <ul className="space-y-3">
                   <li>
                     <a
-                      href="#"
+                      href="/#faq"
                       className="text-sm text-zinc-500 hover:text-white transition"
                     >
                       FAQs

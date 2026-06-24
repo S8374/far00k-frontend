@@ -5,7 +5,7 @@ import Container from "@/components/shared/Container";
 
 export default function Subscribe() {
   return (
-    <section className="py-16 md:py-16 lg:py-20">
+    <section className="pb-16 md:pb-20 bg-stone-950">
       <Container>
         <div className="max-w-4xl mx-auto">
           {/* Main Card */}

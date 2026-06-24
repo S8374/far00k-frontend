@@ -63,26 +63,26 @@ export default function VerifyHero() {
                             How it works
                         </h2>
 
-                        <div className="flex items-center justify-center gap-x-8">
+                        <div className="flex flex-col md:flex-row items-center justify-center gap-y-10 md:gap-x-8">
                             {steps.map((step, index) => (
                                 <div
                                     key={index}
                                     className="flex flex-col items-center text-center group"
                                 >
-                                    <div className="relative mb-4">
-                                        <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl border-4 border-orange-400/60 
+                                    <div className="relative mb-3 md:mb-4">
+                                        <div className="w-16 h-16 md:w-24 md:h-24 rounded-2xl border-4 border-orange-400/60 
                                   flex items-center justify-center bg-stone-900/40 backdrop-blur-sm
                                   group-hover:border-orange-400/90 transition-colors duration-300">
                                             <step.icon
-                                                className="w-10 h-10 md:w-12 md:h-12 text-white"
+                                                className="w-8 h-8 md:w-12 md:h-12 text-white"
                                                 strokeWidth={2}
                                             />
                                         </div>
                                     </div>
-                                    <h3 className="text-2xl md:text-3xl font-semibold text-white mb-4">
+                                    <h3 className="text-xl md:text-3xl font-semibold text-white mb-2 md:mb-4">
                                         {step.title}
                                     </h3>
-                                    <p className="text-base md:text-lg text-stone-300 max-w-xs">
+                                    <p className="text-sm md:text-lg text-stone-300 max-w-xs px-4">
                                         {step.description}
                                     </p>
                                 </div>

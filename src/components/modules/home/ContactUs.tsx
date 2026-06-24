@@ -18,6 +18,7 @@ import { Card } from "@/components/ui/card";
 import Image from "next/image";
 import { property } from "@/data/propertyData";
 import { Mail, MapPin, Phone } from "lucide-react";
+import PropertyMap from "@/components/main/PropertyMap";
 import Container from "@/components/shared/Container";
 
 const formSchema = z.object({
@@ -66,8 +67,8 @@ export default function ContactUs() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-12 items-start mt-16">
-          <div className="col-span-2 border-neutral-500 border rounded-lg p-8 shadow-2xl">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12 items-stretch mt-10 md:mt-16">
+          <div className="col-span-2 border-neutral-500 border rounded-lg p-8 shadow-2xl h-full">
             <h3 className="text-2xl font-semibold mb-8">Send Us a message</h3>
 
             <Form {...form}>
@@ -149,7 +150,7 @@ export default function ContactUs() {
             </Form>
           </div>
 
-          <div className="space-y-10 border border-neutral-500 p-8 rounded-lg shadow-2xl">
+          <div className="flex flex-col justify-between border border-neutral-500 p-8 rounded-lg shadow-2xl h-full gap-6">
             <div>
               <h3 className="text-2xl font-semibold mb-6">Contact Details</h3>
               <div className="space-y-6 text-gray-300">
@@ -171,14 +172,19 @@ export default function ContactUs() {
             <div className="space-y-6">
               <Card className="bg-stone-900 border-white/10 p-6">
                 <h4 className="text-base mb-4 font-semibold text-white">Location & Proximity</h4>
-                <div className="bg-zinc-800 rounded-xl overflow-hidden mb-4">
-                  <Image
-                    src={property.mapImage || "/hero-riyadh-day.png"}
-                    alt="Location map"
-                    width={505}
-                    height={346}
-                    className="w-full h-auto object-cover"
-                    unoptimized
+                <div className="relative bg-zinc-800 rounded-xl overflow-hidden mb-4 h-[250px] w-full">
+                  <PropertyMap
+                    isMapActive={true}
+                    properties={[
+                      {
+                        id: "contact-office",
+                        latitude: 24.735,
+                        longitude: 46.619,
+                        title: "Diriyah UNESCO Heritage Zone",
+                        price: "Our Office",
+                        subtitle: "Riyadh, Saudi Arabia",
+                      },
+                    ]}
                   />
                 </div>
                 <div className="flex items-center gap-2 text-gray-400">

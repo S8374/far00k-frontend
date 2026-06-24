@@ -193,7 +193,7 @@ export default function PropertyCard({
   };
 
   return (
-    <div className="relative w-full max-w-[320px] mx-auto rounded-2xl overflow-hidden shadow-2xl bg-neutral-900 hover:scale-[1.01] transition-transform duration-200">
+    <div className="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-neutral-900 hover:scale-[1.01] transition-transform duration-200">
 
       {/* ── Image Slider ── */}
       <div className="relative h-52">
